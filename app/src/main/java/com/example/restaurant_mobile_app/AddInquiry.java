@@ -45,16 +45,15 @@ public class AddInquiry extends AppCompatActivity {
                     email.setError("Email Can't be Empty !");
                     email.requestFocus();
                 }
-<<<<<<< HEAD
-                else if (TextUtils.isEmpty(subject.getText())){
-=======
+
+
                 else if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
 
                     email.setError("Invalid Email Address !");
                     email.requestFocus();
                 } else if (TextUtils.isEmpty(subject.getText())){
 
->>>>>>> 4ebdd5702dd771408ba31b9c60d1028132001114
+
                     subject.setError("Subject Can't be Empty !");
                     subject.requestFocus();
                 }

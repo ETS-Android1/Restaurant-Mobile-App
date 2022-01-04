@@ -54,17 +54,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-        /*
-            +-------+-------+-------+-------+
-            | Col 1 | col 2 | Col 3 | Col 4 |
-            +-------+-------+-------+-------+
-            |   1   |   2   |  red  |  dog  |
-            +-------+-------+-------+-------+
-            |   2   |   4   |  blue |  cat  |
-            +-------+-------+-------+-------+
-            |   3   |   9   |  red  | bird  |
-            +-------+-------+-------+-------+
-     */
+
 
     // Add a single inquiry
 
@@ -83,7 +73,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // close database
         sqLiteDatabase.close();
     }
-    //************************************************************************************************
+
     // Get all inquiries into a list
     public List<Inquiry> getAllInquiries(){
 
@@ -97,14 +87,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             do {
                 // Create new Inquiry object
                 Inquiry inquiry = new Inquiry();
-                // *****
+
                 inquiry.setId(cursor.getInt(0));
                 inquiry.setName(cursor.getString(1));
                 inquiry.setEmail(cursor.getString(2));
                 inquiry.setSubject(cursor.getString(3));
                 inquiry.setContent(cursor.getString(4));
 
-                //*****
+
                 inquiries.add(inquiry);
             }while (cursor.moveToNext());
         }
